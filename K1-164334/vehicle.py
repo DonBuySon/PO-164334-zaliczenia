@@ -1,0 +1,92 @@
+class Vehicle:
+    _brand: str
+    _model: int
+    _price: float
+    _min_speed: int
+    _weight: int
+
+    def __init__(self, brand: str, model: int, price: float, min_speed: int, weight: int) -> None:
+        self._brand = brand
+
+        self._model = model
+        if self._model < 0:
+            self._model = 0
+        else:
+            return self._model
+
+        self._price = price
+        if self._price < 0:
+            self._price = 0
+        else:
+            return self._price
+
+        self._min_speed = min_speed
+        if self._min_speed < 10:
+            self._min_speed = 10
+        else:
+            return self._min_speed
+
+        self._weight = weight
+        if self._weight < 0:
+            self._weight = 0
+        else:
+            return self._weight
+
+    @property
+    def brand(self) -> str:
+        return self._brand
+
+    @brand.setter
+    def brand(self, brand: str) -> str:
+        if self._brand != str:
+            print("")
+        else:
+            return self._brand
+
+    @property
+    def model(self) -> int:
+        return self._model
+
+    @model.setter
+    def model(self, model: int) -> int:
+        self._model = model
+        if self._model < 0:
+            self._model = 0
+        else:
+            return self._model
+
+    @property
+    def price(self) -> float:
+        return self._price
+
+    @price.setter
+    def price(self, price: float) -> float:
+        self._price = price
+        if self._price < 0:
+            self._price = 0
+        else:
+            return self._price
+
+    @property
+    def min_speed(self) -> int:
+        return self._min_speed
+
+    @min_speed.setter
+    def min_speed(self, min_speed: int) -> int:
+        self._min_speed = min_speed
+        if self._min_speed < 10:
+            self._min_speed = 10
+        else:
+            return self._min_speed
+
+    @property
+    def weight(self) -> int:
+        return self._weight
+
+    @weight.setter
+    def weight(self, weight: int) -> int:
+        self._weight = weight
+        if self._weight < 0:
+            self._weight = 0
+        else:
+            return self._weight
